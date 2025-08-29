@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Film, User, Heart, ShoppingBag } from "lucide-react";
+import { Film, User, Heart, ShoppingBag, LogOut } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 
 export function Header() {
+  const { user, signOut } = useAuth();
+
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b-2 border-pixel-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -40,24 +43,42 @@ export function Header() {
 
         {/* User Actions */}
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" asChild>
-            <Link to="/watchlist">
-              <Heart className="w-4 h-4" />
-              <span className="sr-only">Watchlist</span>
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link to="/purchases">
-              <ShoppingBag className="w-4 h-4" />
-              <span className="sr-only">Purchases</span>
-            </Link>
-          </Button>
-          <Button variant="outline" size="sm" asChild>
-            <Link to="/login">
-              <User className="w-4 h-4 mr-2" />
-              Login
-            </Link>
-          </Button>
+          {user ? (
+            <>
+              <Button variant="ghost" size="icon" asChild>
+                <Link to="/watchlist">
+                  <Heart className="w-4 h-4" />
+                  <span className="sr-only">Watchlist</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <Link to="/purchases">
+                  <ShoppingBag className="w-4 h-4" />
+                  <span className="sr-only">Purchases</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon">
+                <User className="w-4 h-4" />
+                <span className="sr-only">Profile</span>
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={signOut}
+                title="Logout"
+              >
+                <LogOut className="w-4 h-4" />
+                <span className="sr-only">Logout</span>
+              </Button>
+            </>
+          ) : (
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/auth">
+                <User className="w-4 h-4 mr-2" />
+                Login
+              </Link>
+            </Button>
+          )}
         </div>
       </div>
     </header>
