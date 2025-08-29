@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'pixel': ['"Press Start 2P"', 'monospace'],
+				'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				/* Custom CineHub Retro Colors */
+				'retro-brick': 'hsl(var(--retro-brick))',
+				'retro-olive': 'hsl(var(--retro-olive))',
+				'retro-blue': 'hsl(var(--retro-blue))',
+				'pixel-border': 'hsl(var(--pixel-border))',
+				'rating-gold': 'hsl(var(--rating-gold))'
+			},
+			backgroundImage: {
+				'gradient-retro': 'var(--gradient-retro)',
+				'gradient-card': 'var(--gradient-card)',
+			},
+			boxShadow: {
+				'pixel': 'var(--shadow-pixel)',
+				'card-retro': 'var(--shadow-card)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +102,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pixel-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 5px hsl(var(--primary) / 0.5)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.8)' 
+					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pixel-glow': 'pixel-glow 2s ease-in-out infinite',
+				'fade-in-up': 'fade-in-up 0.5s ease-out'
 			}
 		}
 	},
