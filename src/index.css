@@ -9,64 +9,64 @@ CineHub Design System: Nothing UI meets Retro
 
 @layer base {
   :root {
-    /* Dark Purple/Black Base */
-    --background: 270 15% 8%;
-    --foreground: 270 5% 95%;
+    /* Black Base */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
     
-    --card: 270 12% 12%;
-    --card-foreground: 270 5% 90%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 90%;
     
-    --popover: 270 12% 10%;
-    --popover-foreground: 270 5% 95%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 95%;
     
-    /* Purple Primary */
-    --primary: 270 70% 65%;
-    --primary-foreground: 270 15% 8%;
+    /* Black Primary */
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 95%;
     
-    /* Dark Secondary */
-    --secondary: 270 8% 18%;
-    --secondary-foreground: 270 5% 85%;
+    /* Purple Secondary */
+    --secondary: 270 70% 50%;
+    --secondary-foreground: 0 0% 95%;
     
-    --muted: 270 10% 15%;
-    --muted-foreground: 270 5% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
     
     /* Purple Accent */
-    --accent: 270 40% 25%;
-    --accent-foreground: 270 70% 80%;
+    --accent: 270 70% 60%;
+    --accent-foreground: 0 0% 95%;
     
     --destructive: 0 70% 60%;
     --destructive-foreground: 270 5% 95%;
     
-    --border: 270 10% 25%;
-    --input: 270 10% 20%;
-    --ring: 270 70% 65%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 270 70% 60%;
     
     --radius: 0.25rem;
     
-    /* Custom CineHub Dark Colors */
-    --retro-brick: 10 60% 45%;
-    --retro-olive: 80 40% 35%;
-    --retro-blue: 240 60% 55%;
-    --pixel-border: 270 15% 30%;
-    --rating-gold: 45 90% 55%;
+    /* Custom CineHub Black Colors */
+    --retro-brick: 10 50% 40%;
+    --retro-olive: 80 30% 30%;
+    --retro-blue: 240 50% 50%;
+    --pixel-border: 0 0% 25%;
+    --rating-gold: 45 80% 50%;
     
     /* Gradients */
-    --gradient-retro: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent)));
+    --gradient-retro: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary)));
     
     /* Shadows */
     --shadow-pixel: 0 2px 0 hsl(var(--pixel-border)), 0 4px 8px hsl(var(--muted));
     --shadow-card: 0 4px 12px hsl(var(--muted-foreground) / 0.1);
     
     /* Sidebar variables */
-    --sidebar-background: 270 15% 8%;
-    --sidebar-foreground: 270 5% 85%;
-    --sidebar-primary: 270 70% 65%;
-    --sidebar-primary-foreground: 270 15% 8%;
-    --sidebar-accent: 270 8% 18%;
-    --sidebar-accent-foreground: 270 5% 90%;
-    --sidebar-border: 270 10% 25%;
-    --sidebar-ring: 270 70% 65%;
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 0 0% 10%;
+    --sidebar-primary-foreground: 0 0% 95%;
+    --sidebar-accent: 270 70% 50%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 270 70% 60%;
   }
 
   .dark {
