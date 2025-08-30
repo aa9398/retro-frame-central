@@ -9,6 +9,9 @@ import MovieDetail from "./pages/MovieDetail";
 import TopMovies from "./pages/TopMovies";
 import TopSeries from "./pages/TopSeries";
 import Auth from "./pages/Auth";
+import Watchlist from "./pages/Watchlist";
+import Purchases from "./pages/Purchases";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,9 +30,9 @@ const App = () => (
             <Route path="/top-movies" element={<TopMovies />} />
             <Route path="/top-series" element={<TopSeries />} />
             <Route path="/auth" element={<Auth />} />
-            {/* TODO: Add these pages when authentication is set up */}
-            {/* <Route path="/watchlist" element={<Watchlist />} /> */}
-            {/* <Route path="/purchases" element={<Purchases />} /> */}
+            <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="/purchases" element={<Purchases />} />
+            <Route path="/profile" element={<Profile />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
